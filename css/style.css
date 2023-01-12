@@ -1,0 +1,393 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Averia Serif Libre', sans-serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background:rgba(254, 253, 253, 0.445);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 9%;
+}
+
+header .logo{
+    width: 150px;
+	height: 60px;
+}
+
+header .navbar a{
+    color:black;
+    font-size: 20px;
+	text-decoration: none;
+    margin:0 .8rem;
+}
+
+header .navbar a:hover{
+    color: #38AACE;
+}
+
+#menu-bar{
+    color:black;
+    border:.1rem solid black;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding:.5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+	overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .video-container video{
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 2.35/1){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 2.35/1){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.content{
+	position: absolute;
+	padding-top: 50px;
+	text-align: center;
+	transform: translateY(-50%);
+}
+
+p{
+	color: white;
+	font-size: 16px;
+	line-height: 27px;
+	padding: 5px
+}
+
+h1{
+	color: transparent;
+	margin: 20px 0px 20px;
+	background-image: linear-gradient(180deg, #E24348, #38AACE);
+	-webkit-background-clip: text;
+	font-size: 90px;
+	cursor: default;
+	transition: all 0.5s ease-in-out;
+}
+
+h1:hover{
+	transform: scale(1.1);
+}
+
+h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	text-align: auto;
+    padding:2.5rem 0;
+}
+
+h3{
+	color:azure;
+	font-size: 35px;
+	margin-bottom: 15px;
+}
+
+span{
+	color: #6dc6fa;
+}
+
+.about{
+    width: 100%;
+	padding: 100px 0px;
+	background-color: #191919;
+}
+
+.img{
+	height: auto;
+	width: 430px;
+}
+
+.main{
+	width: 1130px;
+	max-width: 95%;
+	display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.about-text{
+	width: 550px;
+}
+
+.title{
+	color: white;
+	font-size: 75px;
+	width: 1130px;
+	margin: 0 auto;
+    text-align: center;
+    padding:2.5rem 0;
+}
+
+.members{
+	background: #101010;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+	margin: 10 auto;
+    text-align: center;
+    padding:2.5rem 0;
+}
+
+.gallery{
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.gallery:hover .overlay {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #6dc6fab7;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+  
+.overlay h5{
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.overlay p{
+	color: white;
+	font-size: 12px;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+h5{
+	color: #6dc6fa;
+	font-size: 23px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.media{
+	background: #191919;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0px;
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+}
+
+.albums{
+	background: #101010;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0px;
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+}
+
+
+.sosmed{
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-color: #191919;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.social{
+	display: flex;
+	justify-content: center;
+}
+.social a{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  #6dc6fa;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.social a:hover{
+    background-color: transparent;
+	border: 2px solid #6dc6fa;
+	color: #6dc6fa;
+	cursor: pointer;
+}
+
+.btn{
+	background-color:#6dc6fa;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition: transform .4s; 
+}
+
+.btn:hover{
+    background-color: transparent;
+	border: 2px solid #6dc6fa;
+	color: #6dc6fa;
+	cursor: pointer;
+}
+
+footer {
+	background-color: black;
+	padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+
+/* media queries */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:991px){
+
+    header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-bar{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; right:0; left: 0;
+        background:white;
+        border-top: .1rem solid #ffeac5;
+        padding:1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        border-radius: .5rem;
+        padding:1.5rem;
+        margin:1.5rem 0;
+        background:#ffeac5;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading span{
+        font-size: 2.5rem;
+    }
+}
